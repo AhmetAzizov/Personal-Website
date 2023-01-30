@@ -1,0 +1,94 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  :root{
+    --nav-bar-height: 100px;
+  }
+  
+  .nav-bar{
+    position: sticky;
+    width: 100%;
+    height: var(--nav-bar-height);
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+
+  .main-screen{
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - var(--nav-bar-height));
+    background-color: gray;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+
+  .image-container{
+    margin: 50px;
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .main-container{
+    position: relative;
+    min-width: 300px;
+    max-width: 500px;
+    height: 300px;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+  }
+
+  .before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .image{
+    position: absolute;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+  
+  .after{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: 1s;
+    /* -webkit-transition: opacity 0.3s; */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+
+  .image-context{
+    margin: 10px;
+    font-size: 20px;
+    opacity: 0;
+    transition: 1s;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    
+  }
+
+  .main-container:hover .after{
+    opacity: 0.6;
+  }
+
+  .main-container:hover .image-context{
+    opacity: 1;
+  }
