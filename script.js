@@ -40,10 +40,23 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementsByClassName("nav-bar")[0].style.top = "0";
+    // document.getElementsByClassName("nav-items")[0].style.top = "var(--nav-bar-height)";
     console.log("normal");
   } else {
     document.getElementsByClassName("nav-bar")[0].style.top = "-100px";
+    // document.getElementsByClassName("nav-items")[0].style.top = "calc(var(--nav-bar-height))";
+    // document.getElementsByClassName("nav-items")[0].style.height = "100vh";
     console.log("not normal");
   }
   prevScrollpos = currentScrollPos;
 }
+
+
+
+
+var navButton = document.getElementsByClassName("nav-side-open")[0];
+var navItems = document.getElementsByClassName("nav-items")[0]
+
+navButton.addEventListener("click", function(){
+  navItems.classList.toggle("nav-items-width");
+});
