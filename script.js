@@ -35,24 +35,19 @@ if(screen.availHeight > screen.availWidth){
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
-
 window.onscroll = function() {
+  if (!document.getElementsByClassName("nav-items")[0].classList.contains("nav-items-width")) {
+
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementsByClassName("nav-bar")[0].style.top = "0";
-    document.getElementsByClassName("nav-items")[0].style.top = "var(--nav-bar-height)";
-    document.getElementsByClassName("nav-items")[0].style.height = "calc(100vh - var(--nav-bar-height))";
-    // document.getElementsByClassName("nav-items")[0].style.position = "fixed";
-    console.log("normal");
   } else {
     document.getElementsByClassName("nav-bar")[0].style.top = "-100px";
-    document.getElementsByClassName("nav-items")[0].style.top = "calc(var(--nav-bar-height) + 30px)";
-    document.getElementsByClassName("nav-items")[0].style.height = "100vh";
-    document.getElementsByClassName("nav-items")[0].style.position = "absolute";
-    console.log("not normal");
   }
   prevScrollpos = currentScrollPos;
 }
+}
+
 
 
 
