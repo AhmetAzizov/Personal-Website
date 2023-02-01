@@ -52,9 +52,21 @@ window.onscroll = function() {
 
 
 
+
+
 var navButton = document.getElementsByClassName("nav-side-open")[0];
 var navItems = document.getElementsByClassName("nav-items")[0]
 
 navButton.addEventListener("click", function(){
   navItems.classList.toggle("nav-items-width");
 });
+
+
+window.onresize = function(){
+  if (window.innerWidth >= 1000) {
+    navItems.classList.remove("nav-items-width");
+    console.log("message");
+  }
+
+  
+}
