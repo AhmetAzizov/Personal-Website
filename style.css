@@ -59,6 +59,7 @@ html, body{
   display: flex;
   right: 0;
   transition: width 1s;
+  transition: height 0.5;
 }
 
 li {
