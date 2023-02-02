@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  html, body{
+    margin: 0;
+    padding: 0;
+    /* background-image: url('pictures/wallpaper.jpg'); */
+    overflow: auto;
+  }
+
+:root{
+    --nav-bar-height: 5rem;
+  }
+  
+  .nav-bar{
+    position: fixed;
+    width: 100%;
+    height: var(--nav-bar-height);
+    top: 0;
+    left: 0;
+    background-color: rgb(59, 58, 58);
+    display: flex;
+    justify-content: space-between;
+    transition: top 0.5s;
+    z-index: 5;
+    /* -webkit-box-shadow: 0px 52px 91px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 52px 91px -5px rgba(0,0,0,1);
+    box-shadow: 0px 52px 91px -5px rgba(0,0,0,1); */
+    -webkit-box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
+    -moz-box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
+    box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
+    user-select: none;
+    opacity: 0.9;
+  }
+  
+  
+  
+  .company-name{
+    color: rgb(152, 152, 152);
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: left;
+    transition: 0.5s;
+  }
+  
+  .company-name:hover{
+    text-shadow: 13px 9px 7px black;
+  }
+  
+  .nav-items{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: black;
+    font-weight: bold;
+    /* font-size: 1.5rem; */
+    display: flex;
+    right: 0;
+    transition: width 1s;
+    /* transition: height 1s; */
+    opacity: 0.9;
+  }
+  
+  li {
+    list-style: none;
+    height: 100%;
+  }
+  
+  .nav-item{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
+    font-size: 2rem;
+    transition: 0.4s linear;
+    font-weight: bold;
+  }
+  
+  
+  
+  .nav-item:hover{
+    background-color: rgb(94, 93, 93);
+    -webkit-box-shadow: 3px 5px 35px 7px rgba(255,255,255,1);
+    -moz-box-shadow: 3px 5px 35px 7px rgba(255,255,255,1);
+    box-shadow: 3px 5px 35px 7px rgba(255,255,255,1);
+  }
+  
+  .nav-item:hover{
+    color: white;
+  }
+  
+  .nav-item:focus{
+    outline: none;
+  }
+  
+  .nav-side-open {
+    position: absolute;
+    right: 0;
+    padding: 1.2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    display: none;
+    align-items: center;
+    height: 100%;
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+    * {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    * {
+      font-size: 13px;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 1000px) {
+    * {
+      font-size: 16px;
+    }
+  
+    .nav-items{
+      position: absolute;
+      flex-direction: column;
+      /* height: calc(100vh - var(--nav-bar-height)); */
+      height: 40vh;
+      background-color: rgb(117, 115, 115);
+      top: var(--nav-bar-height);
+      width: 0;
+      overflow: hidden;
+    }
+  
+    .nav-item{
+      margin: 0;
+      justify-content: center;
+    }
+  
+    li{
+      width: 100%;
+      border: 1px solid gray;
+    }
+  
+    .nav-side-open {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    * {
+      font-size: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    * {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    * {
+      font-size: 13px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    * {
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    * {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (max-height: 500px) {
+    * {
+      font-size: 15px;
+    }
+  
+    .nav-items{
+      height: 50vh;
+    }
+  }
+  
+  @media only screen and (max-height: 400px) {
+    * {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-height: 350px) {
+    * {
+      font-size: 12px;
+    }
+  
+    .nav-items{
+      height: 60vh;
+    }
+  }
+  
+  
+  .nav-items-width{
+    width: 50vw;
+  }

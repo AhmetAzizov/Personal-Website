@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 html, body{
-  margin: 0;
-  padding: 0;
   /* background-image: url('pictures/wallpaper.jpg'); */
   background-color: rgb(88, 87, 87);
   overflow: auto;
@@ -242,11 +242,12 @@ scrollbar-width: none;  /* Firefox */
   }
 
   .nav-items{
+    position: absolute;
     flex-direction: column;
     /* height: calc(100vh - var(--nav-bar-height)); */
     height: 40vh;
     background-color: rgb(117, 115, 115);
-    margin-top: var(--nav-bar-height);
+    top: var(--nav-bar-height);
     width: 0;
     overflow: hidden;
   }
@@ -275,6 +276,12 @@ scrollbar-width: none;  /* Firefox */
 @media only screen and (max-width: 600px) {
   * {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  * {
+    font-size: 13px;
   }
 }
 

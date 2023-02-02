@@ -67,6 +67,4 @@ window.onresize = function(){
     navItems.classList.remove("nav-items-width");
     console.log("message");
   }
-
-  
 }
