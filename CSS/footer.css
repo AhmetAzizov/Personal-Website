@@ -1,6 +1,7 @@
 footer{
     background-color: rgb(46, 46, 46);
     height: 300px;
+    padding-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -20,7 +21,6 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    height: 60%;
     gap: 4rem;
 }
 
@@ -35,12 +35,12 @@ footer{
     width: 3rem;
     height: 3rem;
     color: white;
-    transition: transform 1s;
+    transition: transform 1s, color 1s;
 }
 
 
 .social-media-icon:hover{
-    color: gray;
+    color: rgb(49, 153, 251);
     transform: scale(1.5) rotate(360deg);
 }
 
