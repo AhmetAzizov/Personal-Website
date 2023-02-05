@@ -51,7 +51,7 @@ p {
     position: absolute;
     background-color: gray;
     width: 100vw;
-    height: 400px;
+    height: 300px;
     -webkit-box-shadow: 0px 50px 69px 84px grey;
     -moz-box-shadow: 0px 50px 69px 84px gray;
     box-shadow: 0px 50px 69px 84px grey;
@@ -77,9 +77,13 @@ p {
 
 .self-picture-container:hover{
     transform: scale(1.1);
-    -webkit-box-shadow: 0px 0px 107px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 107px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 107px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
 }
 
-
+@media only screen and (max-width: 500px) {
+    .upper-section-white {
+        height: 200px;
+    }
+}
