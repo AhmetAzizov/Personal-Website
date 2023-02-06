@@ -13,9 +13,12 @@ window.onscroll = function() {
 }
 }
 
+document.getElementsByClassName("menu-button-container")[0].addEventListener("click", function(){
+  document.getElementsByClassName("menu-button-container")[0].classList.toggle("change");
+});
 
 
-var navButton = document.getElementsByClassName("nav-side-open")[0];
+var navButton = document.getElementsByClassName("menu-button-container")[0];
 var navItems = document.getElementsByClassName("nav-items")[0]
 
 navButton.addEventListener("click", function(){

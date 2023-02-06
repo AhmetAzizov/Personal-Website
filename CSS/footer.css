@@ -7,6 +7,7 @@ footer{
     -webkit-box-shadow: 0px -14px 104px 97px rgb(46 46 46);
     -moz-box-shadow: 0px -14px 104px 97px rgb(46 46 46);
     box-shadow: 0px -14px 104px 97px rgb(46 46 46);
+    overflow: hidden;
 }
 
 .social-media{
@@ -21,9 +22,8 @@ footer{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: relative;
-    gap: 4rem;
 }
 
 .social-media-info{
@@ -48,9 +48,7 @@ footer{
 
 .contact-info{
     flex-grow: 1;
-
 }
-
 
 .contact-item{
     font-size: 1.5rem;
@@ -60,6 +58,19 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+}
+
+.contact-item:hover .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 
@@ -77,3 +88,21 @@ footer{
         text-align: center;
     }
 }
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-filled {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }

@@ -6,23 +6,68 @@
   }
 
 html, body{
-    background-color: rgb(88, 87, 87);
     overflow-y: auto;
     overflow-x: hidden;
   }
 
-.main-body {
+.upper-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vh - var(--nav-bar-height));
+    /* height: 100vh; */
     margin-top: var(--nav-bar-height);
-    max-width: 1200px;
-    margin: 150px auto;
-    padding: 2.5em;
+    padding: 0 7vw
+}
 
+.background-video{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.self-picture-container .self-picture{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0.8;
+    transition: opacity 1s;
+}
+
+.self-picture-container {
+    position: relative;
+    max-width: 60vw;
+    max-height: 60vh;
+    border-radius: 100%;
+    z-index: 2;
+    transition: 1s cubic-bezier(0.47, 1.12, 0.46, -0.36);
+}
+
+.self-picture:hover {
+    opacity: 1;
+}
+
+.self-picture-container:hover{
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
+}
+
+.main-body {
+    padding: 50px 7vw 250px;
+    background-color: black;
 }
 
 .header-name {
+    z-index: 1;
+    color: white;
     text-align: center;
     font-size: 3rem;
-    margin-top: 100px;
 }
 
 .separator-1 {
@@ -32,18 +77,19 @@ html, body{
     margin: 30px auto;
 }
 
-p {
+.main-body p {
     margin-top: 30px;
     display: block;
     font-size: 2rem;
     text-align: center;
+    color: rgb(168, 168, 168);
 }
 
 .body-text {
     margin-top: 70px;
     text-align: justify;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     color: rgb(36, 34, 34);
 }
 
@@ -55,31 +101,6 @@ p {
     -webkit-box-shadow: 0px 50px 69px 84px grey;
     -moz-box-shadow: 0px 50px 69px 84px gray;
     box-shadow: 0px 50px 69px 84px grey;
-}
-
-.self-picture{
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    border-radius: inherit;
-    z-index: 1;
-}
-
-.self-picture-container {
-    position: relative;
-    margin: auto;
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 100%;
-    z-index: 1;
-    transition: 1s cubic-bezier(0.47, 1.12, 0.46, -0.36);
-}
-
-.self-picture-container:hover{
-    transform: scale(1.1);
-    -webkit-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
 }
 
 @media only screen and (max-width: 500px) {

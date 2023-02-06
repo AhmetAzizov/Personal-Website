@@ -1,12 +1,11 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   html, body{
-    margin: 0;
-    padding: 0;
-    /* background-image: url('pictures/wallpaper.jpg'); */
     overflow: auto;
   }
 
@@ -25,12 +24,6 @@
     justify-content: space-between;
     transition: top 0.5s;
     z-index: 5;
-    /* -webkit-box-shadow: 0px 52px 91px -5px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 52px 91px -5px rgba(0,0,0,1);
-    box-shadow: 0px 52px 91px -5px rgba(0,0,0,1); */
-    -webkit-box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
-    -moz-box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
-    box-shadow: 0px 26px 136px 32px rgba(199,199,199,1);
     user-select: none;
     opacity: 0.9;
   }
@@ -41,7 +34,7 @@
     color: antiquewhite;
     font-size: 2.2rem;
     font-weight: bold;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     white-space: nowrap;
     height: 100%;
     display: flex;
@@ -70,15 +63,11 @@
     opacity: 0.9;
   }
   
-  li {
-    list-style: none;
-    height: 100%;
-  }
-  
   .nav-items .nav-item{
     text-decoration: none;
     color: antiquewhite;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     padding-right: 1.7rem;
@@ -96,38 +85,37 @@
     -moz-box-shadow: 3px 5px 35px 7px rgba(255,255,255,1);
     box-shadow: 3px 5px 35px 7px rgba(255,255,255,1);
   }
-  
-  
-  .nav-item:focus{
-    outline: none;
-  }
-  
-  .nav-side-open {
+
+
+  .menu-button-container {
     position: absolute;
     right: 0;
+    top: 0;
     padding: 1.2rem;
-    font-size: 3rem;
-    font-weight: bold;
     display: none;
-    align-items: center;
-    height: 100%;
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.6s;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
   }
 
 
   @media only screen and (max-width: 1200px) {
-    * {
-      font-size: 14px;
-    }
-  }
-  
-  @media only screen and (max-width: 1100px) {
-    * {
-      font-size: 13px;
-    }
-  }
-  
-  
-  @media only screen and (max-width: 1000px) {
     * {
       font-size: 16px;
     }
@@ -148,13 +136,8 @@
       justify-content: center;
     }
   
-    li{
-      width: 100%;
-      border: 1px solid gray;
-    }
-  
-    .nav-side-open {
-      display: flex;
+    .menu-button-container {
+      display: inline-block;
     }
 
     .nav-items-width{
