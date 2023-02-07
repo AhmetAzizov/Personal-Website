@@ -70,7 +70,9 @@ footer{
     'FILL' 1,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 48;
+
+    transform: rotate(360deg);
 }
 
 
@@ -90,13 +92,15 @@ footer{
 }
 
 
-
+/* Material Design icon settings */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 48
+  'opsz' 48;
+
+  transition: transform 0.6s;
 }
 
 .material-symbols-filled {
@@ -106,3 +110,4 @@ footer{
     'GRAD' 0,
     'opsz' 48
   }
+  /* --------------------------- */
