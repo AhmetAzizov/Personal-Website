@@ -1,17 +1,27 @@
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+var wrapper = document.getElementsByClassName("page-wrapper")[0];
+var navBar = document.getElementsByClassName("nav-bar")[0];
+
+var prevScrollpos = wrapper.scrollTop;
+
+wrapper.onscroll = function() {
   if (!document.getElementsByClassName("nav-items")[0].classList.contains("nav-items-opened")) {
 
-  var currentScrollPos = window.pageYOffset;
+  var currentScrollPos = wrapper.scrollTop;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementsByClassName("nav-bar")[0].style.top = "10px";
+    navBar.classList.remove("nav-bar-closed");
   } else {
-    document.getElementsByClassName("nav-bar")[0].style.top = "-100px";
+    navBar.classList.add("nav-bar-closed");
   }
+
+  if (currentScrollPos <= 0) {
+    navBar.classList.remove("nav-bar-closed");
+  }
+
   prevScrollpos = currentScrollPos;
 }
 }
+// ------------------------------------------------------------------------------------------
 
 document.getElementsByClassName("menu-button-container")[0].addEventListener("click", function(){
   document.getElementsByClassName("menu-button-container")[0].classList.toggle("change");
