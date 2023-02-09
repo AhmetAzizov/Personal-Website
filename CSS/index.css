@@ -5,6 +5,7 @@
     padding: 0;
   }
 
+
 html, body{
     overflow-x: hidden;
     overflow-y: hidden;
@@ -18,7 +19,7 @@ html, body{
 }
 
 .nav-bar{
-    width: calc(100% - 40px);
+    width: calc(100% - 35px);
   }
 
 .upper-section{
@@ -76,6 +77,7 @@ html, body{
 }
 
 .header-name {
+    font-family: 'Lobster', cursive;    
     z-index: 1;
     color: whitesmoke;
     text-align: center;
@@ -83,6 +85,11 @@ html, body{
     font-size: 6vh;
     opacity: 0.7;
     transform: translateZ(-5px) scale(1.2);
+    background: url(../pictures/6.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: cover;
+    color: transparent;
 }
 
 .main-body {
@@ -96,6 +103,7 @@ html, body{
     -webkit-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
     -moz-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
     box-shadow: 0px -27px 72px 44px rgb(0 0 18);
+
 }
 
 .separator-1 {
@@ -112,12 +120,13 @@ html, body{
 }
 
 .body-text {
+    font-family: 'Bree Serif', cursive;    
     margin-top: 70px;
     max-width: 1000px;
     text-align: justify;
     font-size: 1.8rem;
     font-weight: 400;
-    color: rgb(168, 168, 168);;
+    color: rgb(168, 168, 168);
 }
 
 .upper-section-white {

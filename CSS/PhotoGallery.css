@@ -11,6 +11,12 @@ html, body{
   overflow: auto;
 }
 
+.page-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .image-container{
   /* margin: 50px; */
   /* margin-top: 50px;
