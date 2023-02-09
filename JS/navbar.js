@@ -16,9 +16,9 @@ wrapper.onscroll = function() {
     console.log("close");
   }
 
-  // if (currentScrollPos <= 0) {
-  //   navBar.classList.remove("nav-bar-closed");
-  // }
+  if (currentScrollPos <= 0) {
+    navBar.classList.remove("nav-bar-closed");
+  }
 
   prevScrollpos = currentScrollPos;
 }
