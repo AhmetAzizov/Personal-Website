@@ -9,6 +9,7 @@
     -moz-box-shadow: 0px 22px 93px 115px rgb(46 46 46);
     box-shadow: 0px 22px 93px 115px rgb(46 46 46);
     overflow: hidden;
+    margin-bottom: var(--nav-bar-height);
 }
 
 .social-media{
