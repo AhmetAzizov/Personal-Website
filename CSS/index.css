@@ -6,16 +6,12 @@
   }
 
 .page-wrapper {
-    height: 100vh;
+    height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 20px;
     overscroll-behavior: none;
 }
-
-.nav-bar{
-    width: calc(100% - 35px);
-  }
 
 .upper-section{
     position: relative;
@@ -23,9 +19,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: calc(100vh - var(--nav-bar-height));
+    height: calc(100vh - var(--nav-bar-height) + 10px);
     width: 100vw;
-    margin-top: var(--nav-bar-height);
+    /* margin-top: var(--nav-bar-height); */
     padding: 0 8vw;
     transform-style: preserve-3d;
     z-index: -1;
@@ -33,11 +29,15 @@
 
 .upper-section .background-video{
     position: absolute;
-    height: calc(100% + var(--nav-bar-height));
-    width: 100%;
+    right: 0;
     bottom: 0;
+    width: 100%;
+    height: calc(100% + 4rem);
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
     object-fit: cover;
-    transform: translateZ(-20px) scale(2);
+    transform: translateZ(-20px) scale(2.1);
 }
 
 .self-picture-container .self-picture{
@@ -65,7 +65,7 @@
 }
 
 .self-picture-container:hover{
-    transform: scale(1.001);
+    /* transform: scale(1.001); */
     -webkit-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 300px 4px rgba(0,0,0,0.75);
@@ -88,40 +88,46 @@
 }
 
 .main-body {
+    position: relative;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 7vw 250px;
+    padding: 7rem 7vw 250px;
     background-color: rgb(0, 0, 18);
     -webkit-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
     -moz-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
     box-shadow: 0px -27px 72px 44px rgb(0 0 18);
-
 }
 
-.separator-1 {
+/* .separator-1 {
     border: 1.5px solid black;
     max-width: 600px;
     opacity: 0.5;
     margin: 30px auto;
-}
+} */
 
 .body-text-head {
+    font-family: 'Pacifico', cursive;    
     color: rgb(168, 168, 168);
-    font-size: 2rem;
+    font-size: 3em;
     text-align: center;
+    background: url(../pictures/4.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: cover;
+    color: transparent;
 }
 
 .body-text {
-    font-family: 'Bree Serif', cursive;    
-    margin-top: 70px;
+    font-family: 'Oleo Script', cursive;    
+    margin-top: 8rem;
     max-width: 1000px;
     text-align: justify;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 400;
-    color: rgb(168, 168, 168);
+    color: rgb(200, 177, 177);
 }
 
 .upper-section-white {

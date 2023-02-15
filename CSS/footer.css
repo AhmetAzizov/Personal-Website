@@ -1,4 +1,5 @@
 .page-footer {
+    position: relative;
     background-color: rgb(46, 46, 46);
     width: 100vw;
     height: 300px;
@@ -53,7 +54,6 @@
 }
 
 .contact-item{
-    font-family: 'Cinzel', cursive;
     font-size: 1.5rem;
     color: lightgray;
     height: 25%;
@@ -61,14 +61,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+}
+
+.contact-text {
+    font-family: 'Assistant', cursive;
 }
 
 .contact-item:hover {
     transform: scale(1.1);
 }
 
-.contact-item:hover .material-symbols-outlined {
+.contact-item:hover .footer-icon {
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
@@ -76,6 +80,18 @@
     'opsz' 48;
 
     transform: rotate(360deg);
+}
+
+.copy-icon:hover {
+    transform: scale(1.4);
+}
+
+.copy-icon:hover {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
 }
 
 

@@ -13,18 +13,22 @@
     <link rel="stylesheet" href="CSS/PhotoGallery.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <script src="JS/navbar.js" defer></script>
-    <script src="JS/PhotoGallery.js" defer></script>
+    <script src="JS/PhotoGallery.js" defer></script>  
+    <script src="JS/footer.js" defer></script>
     <title>Gallery</title>
 </head>
 <body>
+  <div class="page-wrapper">
+
     <div class="nav-bar">
-      <i class="company-name">Company Name</i>
+      <!-- <i class="company-name">Company Name</i> -->
+      <object data="pictures/logo5.svg" class="company-logo" type="image/svg+xml"></object>
       <ul class="nav-items">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="#" class="nav-item">About</a>
-        <a href="#" class="nav-item">Projects</a>
-        <a href="PhotoGallery.html" class="nav-item">Photo Gallery</a>
-        <a href="#" class="nav-item">Contact</a>
+          <a href="index.html" class="nav-item"><span class="material-symbols-outlined">Home</span>Home</a>
+          <a href="#" class="nav-item"><span class="material-symbols-outlined">Stars</span>Skills</a>
+          <a href="#" class="nav-item"><span class="material-symbols-outlined">Dvr</span>Projects</a>
+          <a href="PhotoGallery.html" class="nav-item"><span class="material-symbols-outlined">photo_Library</span>Gallery</a>
+          <a href="#" class="nav-item"><span class="material-symbols-outlined">Mail</span>Contact</a>
       </ul>
       <div class="menu-button-container">
         <div class="bar1"></div>
@@ -33,7 +37,6 @@
       </div>
     </div>
 
-    <div class="page-wrapper">
     <div class="image-container">
       <div class="main-container">
         <div class="before child">
@@ -120,10 +123,10 @@
 
 <footer class="page-footer">
   <div class="contact-info">
-        <div class="contact-item"><span class="material-symbols-outlined">call</span>+48 516 540 058</div>
-        <div class="contact-item"><span class="material-symbols-outlined">location_on</span>Drawska 21, 02-202</div>
-        <div class="contact-item"><span class="material-symbols-outlined">mail</span>ahmet.azizov@gmail.com</div>
-        <div class="contact-item"><span class="material-symbols-outlined" >copyright</span>AhmetAzizov - All rights reserved.</div>
+    <div class="contact-item"><span class="material-symbols-outlined footer-icon">call</span><b class="contact-text">+48 516 540 058</b><span class="material-symbols-outlined copy-icon">content_copy</span></div>
+    <div class="contact-item"><span class="material-symbols-outlined footer-icon">mail</span><b class="contact-text">ahmet.azizov@gmail.com</b><span class="material-symbols-outlined copy-icon">content_copy</span></div>
+    <div class="contact-item"><span class="material-symbols-outlined footer-icon">copyright</span><b>AhmetAzizov - All rights reserved.</b></div>
+    <div class="contact-item"></span><b class="contact-text">Terms of Service  &  Privacy Policy</b></div>
   </div>
   <div class="social-media">
   <p class="social-media-info">Social Media links:</p>
