@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <script src="JS/navbar.js" defer></script>
     <script src="JS/footer.js" defer></script>
+    <script src="JS/contact.js" defer></script>
     <title>Contact</title>
 </head>
 <body>
@@ -39,11 +43,12 @@
       <div class="form-section section">
         <div class="contact-form">
             <div class="form-description">Contact Us<br>Please fill this form</div>
-            <div class="form">
-              <div class="input-container"><i class="fas fa-user form-icon"></i><input class="form-name input" placeholder="Name"></input></div>
-              <div class="input-container"><i class="fas fa-envelope form-icon"></i><input class="form-email input" placeholder="Email"></input></div>
-              <textarea class="form-message input" rows="6" maxlength="200" placeholder="Message..."></textarea>
-            </div>
+            <form action="https://formsubmit.co/ahmet.azizov@hotmail.com" method="POST" class="form">
+              <div class="input-container"><i class="fas fa-user form-icon"></i><input class="form-name input" name="name" placeholder="Name" required></input></div>
+              <div class="input-container"><i class="fas fa-envelope form-icon"></i><input class="form-email input" name="email" placeholder="Email" required></input></div>
+              <textarea class="form-message input" rows="6" maxlength="200" name="message" placeholder="Message (Max 200 characters)" required></textarea>
+              <button type="submit" class="submit">Submit</button>
+            </form>
         </div>
     </div>
 
