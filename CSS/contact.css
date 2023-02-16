@@ -1,0 +1,217 @@
+.page-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+.main-section {
+    background-color: gray;
+    position: relative;
+    min-height: calc(100vh - 4rem + 10px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rem 0;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    min-height: 100%;
+}
+
+.contact-list {
+    gap: 100px;
+    justify-content: space-evenly;
+    padding: 5rem 0;
+}
+
+.contact-type {
+    width: 80%;
+}
+
+
+
+.contact-list-item {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.contact-description {
+    font-size: 2rem;
+}
+
+.contact-content {
+    font-family: 'Poppins', cursive;    
+    position: relative;
+    background-color: rgb(67, 65, 65);
+    height: 80px;
+    width: 100%;
+    font-size: 2.6rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: all;
+    font-weight: 600;
+}
+
+.contact-icon {
+    margin: 10px;
+}
+
+
+.contact-copy {
+    font-size: 4.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.social-icon {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    color: white;
+    transition: transform 0.5s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-text-fill-color: transparent;
+  padding: 0.5rem;
+  border-radius: 39%;
+}
+
+.github {
+    color: #1d1a1a;
+}
+
+.linkedin {
+    color: #0C63BC;
+}
+
+
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+}
+
+.contact-form {
+    width: 80%;
+    padding: 3rem;
+    background-color: rgb(91, 88, 88);
+    border-radius: 2rem;
+}
+
+.form-description {
+    background-color: rgb(143, 141, 138);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: inherit;
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 2rem;
+    padding: 1rem 1rem 1rem 4rem;
+}
+
+.form-message {
+    padding: 1rem;
+    resize: vertical;
+}
+
+
+
+.form-icon {
+    position: absolute;
+    font-size: 2rem;
+    top: 1.2rem;
+    left: 1rem;
+}
+
+
+
+@media only screen and (max-width: 1400px){
+   .main-section {
+    flex-direction: column;
+   }
+
+   .form-section {
+    padding-top: 5rem;
+   }
+
+   .contact-list {
+    padding-top: 10rem;
+   }
+}
+
+@media only screen and (max-width: 800px){
+    .contact-content {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+ }
+
+ @media only screen and (max-width: 600px){
+    .contact-content {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+
+    .contact-copy {
+        font-size: 4rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+ }
+
+ @media only screen and (max-width: 400px){
+    .contact-content {
+        font-size: 1.3rem;
+        height: 40px;
+    }
+
+    .contact-copy {
+        font-size: 3.5rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+ }

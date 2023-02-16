@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.5s;
+    transition: all 0.5s;
     z-index: 5;
     border-radius: 1.5rem;
     /* background-color: transparent; */
@@ -60,6 +60,7 @@
   .nav-bar-closed {
     /* top: -100px; */
     transform: translateY(-140%);
+    opacity: 0;
   }
   
   .company-name{

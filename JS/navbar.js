@@ -10,10 +10,8 @@ wrapper.onscroll = function() {
   var currentScrollPos = wrapper.scrollTop;
   if (prevScrollpos > currentScrollPos) {
     navBar.classList.remove("nav-bar-closed");
-    console.log("open");
   } else {
     navBar.classList.add("nav-bar-closed");
-    console.log("close");
   }
 
   if (currentScrollPos <= 0) {
