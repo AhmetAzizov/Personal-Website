@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <script src="https://smtpjs.com/v3/smtp.js" defer></script>
     <script src="JS/navbar.js" defer></script>
     <script src="JS/footer.js" defer></script>
     <script src="JS/contact.js" defer></script>
@@ -43,7 +44,8 @@
       <div class="form-section section">
         <div class="contact-form">
             <div class="form-description">Contact Us<br>Please fill this form</div>
-            <form action="https://formsubmit.co/ahmet.azizov@hotmail.com" method="POST" class="form">
+            <!-- <form action="https://formsubmit.co/ahmet.azizov@hotmail.com" method="POST" class="form"> -->
+              <form onsubmit="sendEmail(); reset(); return false;" class="form">
               <div class="input-container"><i class="fas fa-user form-icon"></i><input class="form-name input" name="name" placeholder="Name" required></input></div>
               <div class="input-container"><i class="fas fa-envelope form-icon"></i><input class="form-email input" name="email" placeholder="Email" required></input></div>
               <textarea class="form-message input" rows="6" maxlength="200" name="message" placeholder="Message (Max 200 characters)" required></textarea>
