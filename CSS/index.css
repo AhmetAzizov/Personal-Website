@@ -40,6 +40,19 @@
     transform: translateZ(-20px) scale(2.1);
 }
 
+.upper-section .background-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% + 4rem);
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    object-fit: cover;
+    transform: translateZ(-20px) scale(2.1);
+}
+
 .self-picture-container {
     position: relative;
     /* max-width: 400px; */
