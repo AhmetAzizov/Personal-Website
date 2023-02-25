@@ -9,7 +9,7 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    perspective: 20px;
+    /* perspective: 20px; */
     overscroll-behavior: none;
 }
 
@@ -40,8 +40,8 @@
     transform: translateZ(-20px) scale(2.1);
 }
 
-.upper-section .background-image {
-    position: absolute;
+.background-image {
+    /* position: absolute;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -50,7 +50,13 @@
     overflow: hidden;
     z-index: -1;
     object-fit: cover;
-    transform: translateZ(-20px) scale(2.1);
+    transform: translateZ(-20px) scale(2.1); */
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    /* transform: translateZ(-20px) scale(2); */
 }
 
 .self-picture-container {
@@ -61,8 +67,7 @@
     z-index: 2;
     aspect-ratio: 1/1;
     transition: 1s cubic-bezier(0.47, 1.12, 0.46, -0.36);
-    transform: translateZ(-10px) scale(1.5);
-    perspective: 800px;
+    /* transform: translateZ(-10px) scale(1.5); */
 }
 
 .self-picture-container .self-picture-card {
@@ -106,7 +111,7 @@
     font-size: 3rem;
     font-size: 6vh;
     opacity: 0.9;
-    transform: translateZ(-5px) scale(1.2);
+    /* transform: translateZ(-5px) scale(1.2); */
     background: url(../pictures/6.jpg);
     background-clip: text;
     -webkit-background-clip: text;
@@ -122,10 +127,8 @@
     justify-content: center;
     align-items: center;
     padding: 7rem 7vw 250px;
-    background-color: rgb(0, 0, 18);
-    -webkit-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
-    -moz-box-shadow: 0px -27px 72px 44px rgb(0 0 18);
-    box-shadow: 0px -27px 72px 44px rgb(0 0 18);
+    background-color: rgb(0, 0, 18, 50%);
+    /* box-shadow: 0px -21px 85px 77px rgb(0 0 18); */
 }
 
 /* .separator-1 {
@@ -147,6 +150,12 @@
     color: transparent;
 }
 
+.main.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 .body-text {
     font-family: 'Oleo Script', cursive;    
     margin-top: 8rem;
@@ -156,6 +165,21 @@
     font-weight: 400;
     color: rgb(200, 177, 177);
 }
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
 
 .upper-section-white {
     position: absolute;
@@ -170,5 +194,13 @@
 @media only screen and (max-width: 500px) {
     .self-picture-container {
         height: 40vh;
+    }
+}
+
+
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
     }
 }
