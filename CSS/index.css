@@ -56,6 +56,7 @@
     height: 100%;
     width: 100%;
     z-index: -2;
+    object-fit: cover;
     /* transform: translateZ(-20px) scale(2); */
 }
 
@@ -68,6 +69,7 @@
     aspect-ratio: 1/1;
     transition: 1s cubic-bezier(0.47, 1.12, 0.46, -0.36);
     /* transform: translateZ(-10px) scale(1.5); */
+    perspective: 800px;
 }
 
 .self-picture-container .self-picture-card {
@@ -79,7 +81,7 @@
 }
 
 .self-picture-container:hover .self-picture-card {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) !important;
 }
 
 .self-picture-container .self-picture-front, .self-picture-back{
@@ -168,15 +170,17 @@
 
 .hidden {
     opacity: 0;
-    filter: blur(3px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
-.show {
+.show{
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    transform: translateX(0) !important;
+}
+
+.hidden:nth-child(1) {
+    transform: translateX(100%);
 }
 
 
