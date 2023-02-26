@@ -6,6 +6,7 @@
   }
 
 .page-wrapper {
+    position: fixed;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -171,7 +172,7 @@
 .hidden {
     opacity: 0;
     transform: translateX(-100%);
-    transition: all 1s;
+    transition: transform 1.5s, opacity 2s;
 }
 
 .show{

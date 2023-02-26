@@ -60,7 +60,7 @@
 .contact-content {
     font-family: 'Poppins', cursive;    
     position: relative;
-    color: rgb(47, 47, 47);
+    color: antiquewhite;
     height: 80px;
     width: 100%;
     font-size: 2.6rem;
@@ -71,7 +71,7 @@
     user-select:text;
     font-weight: 600;
     /* border: 4px inset rgb(189, 186, 186); */
-    box-shadow: inset 0px 0px 23px 7px rgb(0 0 0 / 30%);
+    box-shadow: inset 0px 0px 20px 20px rgb(0 0 0 / 50%);
 }
 
 .contact-icon {
@@ -92,7 +92,7 @@
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    border: 4px inset rgb(189, 186, 186);
+    border: 5px inset rgb(189, 186, 186);
     padding: 1rem;
     border-radius: 20px;
 }
@@ -149,10 +149,11 @@
 .form-description {
     font-family: 'Concert One', cursive;
     background-color: transparent;
-    box-shadow: 0px 0px 30px 5px rgba(116, 116, 116, 0.75);
-    color: rgb(175, 172, 168);
-    font-size: 2.5rem;
-    padding: 1rem;
+    /* box-shadow: 0px 0px 30px 5px rgba(116, 116, 116, 0.75); */
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
     border-radius: inherit;
 }
 
@@ -169,13 +170,19 @@
 }
 
 .input {
-    font-family: 'Overpass', cursive;
-    background-color: white;
+    font-family: 'Concert One', cursive;
+    background-color: transparent;
     width: 100%;
     font-size: 2rem;
     border-radius: 2rem;
     padding: 1rem 1rem 1rem 4rem;
     transition: box-shadow .5s;
+    border: 4px inset white;
+}
+
+.input::placeholder {
+    font-family: 'Concert One', cursive;
+    color: rgb(40, 40, 40);
 }
 
 .form-message {
@@ -185,8 +192,9 @@
 
 .input:focus {
     -webkit-box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
+    background-color: rgb(158, 158, 158);
 }
 
 
@@ -194,8 +202,8 @@ box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
 .form-icon {
     position: absolute;
     font-size: 2rem;
-    top: 1.3rem;
-    left: 1rem;
+    top: 1.5rem;
+    left: 1.2rem;
 }
 
 .submit {
@@ -214,37 +222,42 @@ box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
 
 
 .social-icon:nth-child(1){
-    transition-delay: 200ms;
+    transition: transform 0.5s, opacity 2s, filter 2s;
 }
 
 .social-icon:nth-child(2){
-    transition-delay: 400ms;
+    transition: transform 1s, opacity 2s, filter 2s;
 }
 
 .social-icon:nth-child(3){
-    transition-delay: 600ms;
+    transition: transform 2s, opacity 2s, filter 2s;
 }
 
 
 @media only screen and (max-width: 1600px){
     .hidden:nth-child(1) {
+        filter: blur(1);
         opacity: 0;
-        transform: translateX(-430%);
+        transform: translateX(-100%) rotate(360deg);
     }
 
     .hidden:nth-child(2) {
+        filter: blur(1);
         opacity: 0;
-        transform: translateX(-700%);
+        transform: translateX(-200%) rotate(180deg);
+        
     }
 
     .hidden:nth-child(3) {
+        filter: blur(1);
         opacity: 0;
-        transform: translateX(-1000%);
+        transform: translateX(-300%) rotate(100deg);
     }
-    
+
     .show {
+        filter: blur(0) !important;
         opacity: 1 !important;
-        transform: translateX(0) !important;
+        transform: translateX(0) rotate(0deg) !important;
     }
 
    .main-section {
@@ -258,6 +271,15 @@ box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
    .contact-list {
     padding-top: 10rem;
    }
+
+   .social-links {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 2rem;
+    background-color: gray;
+    opacity: 0.8;
+   }
 }
 
 @media only screen and (max-width: 800px){
@@ -269,7 +291,7 @@ box-shadow: 10px 10px 36px 1px rgba(0,0,0,0.75);
         padding: 2rem;
     }
 
-    .contact-type, .social-links, .contact-form {
+    .contact-type, .contact-form {
         width: 90%;
     }
  }

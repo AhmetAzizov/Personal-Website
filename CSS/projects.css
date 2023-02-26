@@ -1,0 +1,48 @@
+.page-wrapper {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* perspective: 20px; */
+    overscroll-behavior: none;
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-auto-rows: 500px;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 5rem 2rem;
+}
+
+.project {
+    border: 1px solid red;
+    border-radius: 1rem;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    object-fit: cover;
+    background-image: url(/pictures/wallpaper.jpg);
+    outline: auto;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .main-body {
+        grid-template-columns: repeat(auto-fit, 300px);
+        grid-auto-rows: 375px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .main-body {
+        grid-template-columns: repeat(auto-fit, 250px);
+        grid-auto-rows: 312.5px;
+    }
+}
