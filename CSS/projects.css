@@ -33,6 +33,44 @@
 }
 
 
+
+.project-container {
+    perspective: 800px;
+}
+
+.project-container .project-card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+}
+
+.project-container:hover .project-card {
+    transform: rotateY(180deg);
+}
+
+.project-container .project-front, .project-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    aspect-ratio: 1/1;
+}
+
+.project-front {
+    background-color: red;
+}
+
+.project-back {
+    background-color: green;
+    transform: rotateY(180deg);
+}
+
+
+
+
+
 @media only screen and (max-width: 450px) {
     .main-body {
         grid-template-columns: repeat(auto-fit, 300px);
