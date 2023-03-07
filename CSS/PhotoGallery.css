@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -13,7 +14,7 @@
   overscroll-behavior: contain;
 }
 
-.image-container{
+.image-container {
   position: relative;
   margin: 15rem 5vw;
   display: grid;
@@ -25,7 +26,7 @@
   user-select: none;
 }
 
-.main-container{
+.main-container {
   position: relative;
   /* width: 500px; */
   background-color: #f1f1f1;
@@ -34,14 +35,14 @@
   aspect-ratio: 1.5;
 }
 
-.before{
+.before {
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 10px;
 }
 
-.image{
+.image {
   position: absolute;
   border-radius: 10px;
   width: 100%;
@@ -49,7 +50,7 @@
   aspect-ratio: 1/1;
 }
 
-.after{
+.after {
   display: flex;
   width: 100%;
   height: 100%;
@@ -64,7 +65,7 @@
   visibility: hidden;
 }
 
-.image-context{
+.image-context {
   margin: 0.6rem;
   font-size: 1.2rem;
   opacity: 0;
@@ -78,24 +79,23 @@
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .after::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .after {
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @media only screen and (orientation: landscape) {
-  
-.main-container:hover .after{
-  visibility: visible;
-  opacity: 0.8;
-}
-.main-container:hover .image-context{
-  opacity: 1;
-}
+  .main-container:hover .after {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  .main-container:hover .image-context {
+    opacity: 1;
+  }
 }
 
 /* @media only screen and (max-width: 1200px) {
@@ -109,8 +109,3 @@ scrollbar-width: none;  /* Firefox */
     font-size: 14px;
   }
 } */
-
-
-
-
-

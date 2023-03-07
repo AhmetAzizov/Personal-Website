@@ -1,32 +1,31 @@
 * {
-    transition: 1s;
+  transition: 1s;
 }
 
-.st0{
-    fill:#000000;
+.st0 {
+  fill: #000000;
 }
 
-.st1{
-    fill:red;
+.st1 {
+  fill: red;
 }
 
 .main:hover .border {
-    fill: white;
+  fill: white;
 }
 
 .main:hover .st1 {
-    fill: gray;
+  fill: gray;
 }
 
 .main:hover .monitor {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .main:hover .separator {
-    transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .main:hover .text {
-    transform: translateX(-12%);
+  transform: translateX(-12%);
 }
-
